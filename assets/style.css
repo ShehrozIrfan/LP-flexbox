@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* =========== navigation bar =========== */
+.navbar {
+    background: linear-gradient(to right,#e30000,#c10001);
+    height: 100px;
+}
+.navbar_inner {
+    width: 80%;
+    margin: auto;
+}
+.logo {
+    width: 200px;
+}
+.f_left {
+    float: left;
+}
+.flex_inside {
+    display: flex;
+    justify-content: space-evenly;
+}
+.flex_inside > div {
+    margin-top: 65px;
+    font-weight: bold;
+}
+.link {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+/* ========== Below Navigation bar ============ */
+.bg {
+    background-image: url(../images//background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.below_navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+    color: white;
+}
+.below_navbar h1 {
+    font-size: 40px;
+}
+.below_navbar h5 {
+    margin-top: 10px;
+}
+.btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 30px;
+    padding: 10px 15px;
+    margin: 20px;
+    cursor: pointer;
+}
+.below_navbar button:focus {
+    outline: 0;
+}
+
+/* =========== Media Queries ============ */
+
+@media(max-width: 768px) {
+    .logo {
+        width: 180px;
+    }
+    .flex_inside > div {
+        font-weight: normal;
+        margin-top: 55px;
+    }   
+}
+@media(max-width: 568px) {
+    .f_left {
+        float: none;
+        text-align: center;
+    }
+    .logo {
+        width: 140px;
+    }
+    .flex_inside {
+        justify-content: space-between;
+    }
+    .flex_inside > div {
+        font-weight: normal;
+        margin-top: 10px;
+    }
+    .link {
+        font-size: 13px;
+    }
+    
+}
+@media(max-width: 375px) {
+    .link {
+        font-size: 12px;
+    }
+}
