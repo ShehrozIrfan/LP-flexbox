@@ -23,11 +23,11 @@ body {
 }
 .flex_inside {
     display: flex;
-    justify-content: space-evenly;
+    padding-left: 80px;
 }
 .flex_inside > div {
     margin-top: 65px;
-    font-weight: bold;
+    padding: 0 15px;
 }
 .link {
     font-size: 18px;
@@ -35,6 +35,40 @@ body {
     text-decoration: none;
 }
 
+/* ============== drop down =========== */
+.dropdown {
+    list-style-type: none;
+    font-size: 18px;
+}
+.dropdown a {
+    text-decoration: none;
+    color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 /* ========== Below Navigation bar ============ */
 .bg {
     background-image: url(../images//background.jpg);
@@ -77,12 +111,23 @@ body {
     .logo {
         width: 180px;
     }
+    .flex_inside {
+        display: flex;
+        padding-left: 40px;
+    }
     .flex_inside > div {
         font-weight: normal;
         margin-top: 55px;
+        padding: 0px 10px;
     }   
+    .dropdown a {
+        font-size: 13px;
+    }
 }
 @media(max-width: 568px) {
+    .navbar_inner {
+        width: 95%;
+    }
     .f_left {
         float: none;
         text-align: center;
@@ -92,18 +137,23 @@ body {
     }
     .flex_inside {
         justify-content: space-between;
+        padding-left: 0px;
     }
     .flex_inside > div {
         font-weight: normal;
         margin-top: 10px;
+        padding: 0px 2px;
     }
-    .link {
+    .link,.dropdown {
         font-size: 13px;
     }
     
 }
 @media(max-width: 375px) {
-    .link {
+    .link,.dropdown {
         font-size: 12px;
+    }
+    .flex_inside {
+        padding-left: 0px;
     }
 }
