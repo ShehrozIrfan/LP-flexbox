@@ -14,14 +14,15 @@
             <div class="navbar_inner">
                 <div class="f_left">
                     <a href="#">
-                        <img src="images/logo.svg" alt="GiGiNa Logo" class="logo">
+                        <!-- <img src="images/logo.svg" alt="GiGiNa Logo" class="logo"> -->
+                        <img src="images/logo.svg" onmouseover="this.src='images/logo-bg.svg'" onmouseout="this.src='images/logo.svg'" class="logo"/>
                     </a>
                 </div>
                 <div class="f_right">
                     <nav class="flex_inside">
                         <div>
                             <li class="dropdown">
-                                <a href="">About Us</a>
+                                <a href="" class="dd_au">About Us</a>
                                 <div class="dropdown-content">
                                   <a href="#">Unsere Founder</a>
                                   <a href="#">Unsere Mission</a>
@@ -62,5 +63,18 @@
            <button class="btn">Unser shop</button>
         </div><!-- below navbar ends here -->
     </div><!-- main-container ends -->
+
+    <script>
+        var logo = document.querySelector('.logo');
+        var f_left = document.querySelector('.f_left');
+        var navbar = document.querySelector('.navbar');
+        var dd_au = document.querySelector('.dd_au');
+        logo.addEventListener('mouseover', function () {
+            navbar.style.background = 'white';
+        });
+        logo.addEventListener('mouseout', function () {
+            navbar.style.background = 'transparent';
+        });
+    </script>
 </body>
 </html>
